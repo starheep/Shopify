@@ -1,0 +1,7 @@
+It is the controller section of project.
+It receives web request, and return web response.
+
+Process:
+1. Send Request
+2. Handle Logic
+3. Return Response

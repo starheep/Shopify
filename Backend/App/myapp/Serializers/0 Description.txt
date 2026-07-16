@@ -1,0 +1,6 @@
+The frontend expects JSON. Serializers convert your Database Tables into the exact JSON format.
+
+Process:
+1. Take Queryset of SQL.
+2. Convert to Python datatype (Optional)
+3. Convert to JSON.

@@ -1,0 +1,7 @@
+Just create classes to store data.
+
+After creating class, apply following commands:
+    python manage.py makemigrations myapp
+    python manage.py migrate
+
+The rest? Django will handle everything.

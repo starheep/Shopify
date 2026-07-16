@@ -1,0 +1,12 @@
+management/command directory:
+    It is a predefined directory in django, where we can store our custom commands.
+    Ex- Pre-defined commands : python manage.py runserver/makemigrations/etc.
+        User Defined command : python manage.py <user_script_name> 
+
+
+build_rag.py:
+    Work: Create RAG to store data in vector db.
+    It converts SQL data into vector data (easily readable by LLM).
+
+To run the script:
+    python manage.py build_rag
