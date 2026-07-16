@@ -250,9 +250,3 @@ Make sure `.env` is included in `.gitignore`.
 B.Tech Computer Science Engineering
 
 ---
-
-# ⭐ Contribution
-
-Contributions, issues, and feature requests are welcome.
-
-If you like this project, consider giving it a ⭐ on GitHub.
