@@ -1,9 +1,8 @@
 FROM python:3.13-slim
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# Added python3-dev and extra ssl headers
 RUN apt-get update && apt-get install -y \
     default-libmysqlclient-dev \
     build-essential \
@@ -13,13 +12,13 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Ensure we are copying from the correct path relative to the Backend folder
 COPY App/requirements.txt .
 
-# Upgrade pip and install
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 COPY App/ .
 
 EXPOSE 8000
+
+CMD ["gunicorn", "App.wsgi:application", "--bind", "0.0.0.0:8000"]

@@ -2,25 +2,23 @@
 Django==5.2.7
 gunicorn==23.0.0
 whitenoise==6.11.0
-asgiref==3.10.0
-sqlparse==0.5.3
+
 
 # --- Database (MySQL) ---
 # Note: Ensure default-libmysqlclient-dev is in your Dockerfile
 mysqlclient==2.2.6
-mysql-connector-python==9.5.0
+
 
 # --- API & Security ---
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 django-cors-headers==4.9.0
-PyJWT==2.10.1
 cryptography==44.0.1
 python-dotenv==1.1.0
 
 # --- AI & Vector DB (ChromaDB/LangChain) ---
 chromadb==1.5.5
-langchain
+langchain==0.3.27
 groq==1.1.2
 openai==2.30.0
 pydantic==2.10.3
